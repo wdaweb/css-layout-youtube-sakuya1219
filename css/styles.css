@@ -1,0 +1,425 @@
+/* 全局样式 */
+html,
+body {
+	height: 100%;
+	font-family: 'Noto Sans TC', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+/* 導覽列 header */
+#header {
+	width: 100%;
+	height: 56px;
+	position: fixed;
+	z-index: 1;
+	background: white;
+}
+
+#header .logo {
+	width: 15%;
+	height: 100%;
+	float: left;
+}
+
+#header .logo img {
+	vertical-align: middle;
+	height: 40%;
+}
+
+#header .search {
+	width: 40%;
+	height: 35px;
+	border: 1px solid rgb(180, 180, 180);
+	border-radius: 30px;
+	background: white;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	display: inline-block;
+}
+
+#header .search>p {
+	font-size: 16px;
+	color: rgb(167, 167, 167);
+	line-height: 35px;
+	float: left;
+	margin-left: 15px;
+}
+
+#header .box1 {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background: rgb(236, 236, 236);
+	position: relative;
+	top: 50%;
+	right: -52%;
+	transform: translate(50%, -50%);
+	display: inline-block;
+}
+
+#header .box1>i {
+	font-size: 20px;
+	color: rgb(55, 55, 55);
+	position: relative;
+	top: 50%;
+	left: 0%;
+	transform: translate(0%, -100%);
+}
+
+#header .search::before {
+	content: '';
+	width: 60px;
+	height: 35px;
+	border-left: 1px solid rgb(180, 180, 180);
+	border-radius: 0 30px 30px 0;
+	background: rgb(236, 236, 236);
+	float: right;
+	position: relative;
+	top: 50%;
+	transform: translate(0%, -50%);
+}
+
+#header .search>i {
+	font-size: 20px;
+	color: rgb(130, 130, 130);
+	margin-left: 10px;
+	position: relative;
+	display: inline-block;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#header .sign {
+	width: 200px;
+	height: 100%;
+	float: right;
+}
+
+#header .sign::after {
+	content: '';
+	width: 80px;
+	height: 30px;
+	border: 1px solid rgb(180, 180, 180);
+	border-radius: 30px;
+	background: rgb(255, 255, 255);
+	position: relative;
+	top: 50%;
+	left: 0%;
+	transform: translate(0%, -50%);
+	margin-right: 20px;
+	float: right;
+}
+
+#header .sign>i {
+	font-size: 20px;
+	color: rgb(0, 140, 240);
+	margin-left: 20px;
+	margin-right: 20px;
+	float: left;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#header .sign>p {
+	font-size: 14px;
+	color: rgb(0, 140, 240);
+	float: left;
+	position: relative;
+	top: 50%;
+	left: 45%;
+	transform: translate(-50%, -50%);
+}
+
+#header .box2>i {
+	font-size: 22px;
+	color: rgb(99, 99, 99);
+	float: left;
+	position: relative;
+	top: 50%;
+	left: -10%;
+	transform: translate(0%, 75%);
+}
+
+/* 側邊攔 sidebar */
+#sidebar {
+	width: 15%;
+	height: 850px;
+	position: fixed;
+	margin-top: 56px;
+	display: inline-block;
+	overflow-y: scroll;
+	padding-left: 20px;
+	/* 調整左側間距 */
+}
+
+#sidebar::-webkit-scrollbar {
+	width: 7px;
+	height: 7px;
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: #999;
+}
+
+#sidebar table {
+	width: 180px;
+	font-size: 14px;
+	color: black;
+	margin: auto;
+}
+
+#sidebar td {
+	vertical-align: middle;
+	line-height: 42px;
+	/* 調整行高 */
+}
+
+#sidebar hr {
+	border: none;
+	border-bottom: 1px solid rgb(216, 216, 216);
+	width: 180px;
+}
+
+#sidebar .signbox {
+	width: 80px;
+	height: 30px;
+	border: 1px solid rgb(167, 167, 167);
+	border-radius: 30px;
+	text-align: center;
+	line-height: 30px;
+	margin-top: 15px;
+}
+
+#sidebar .signbox i {
+	font-size: 20px;
+	padding-right: 3px;
+	color: rgb(0, 140, 240);
+}
+
+#sidebar .signbox p {
+	font-size: 14px;
+	display: inline-block;
+	color: rgb(0, 140, 240);
+}
+
+#sidebar td>i {
+	font-size: 18px;
+	margin-right: 15px;
+}
+
+#sidebar tr.T,
+#sidebar tr.small {
+	font-size: 16px;
+	text-align: left;
+}
+
+#sidebar tr.small {
+	font-size: 12px;
+	font-weight: 400;
+	color: #535353;
+}
+
+#sidebar td.S {
+	line-height: 20px;
+}
+
+/* 標籤分類欄 tag */
+#tag {
+	width: 85%;
+	height: 44px;
+	position: fixed;
+	margin-top: 56px;
+	margin-left: 15%;
+	padding-top: 15px;
+	padding-left: 30px;
+	background: white;
+}
+
+.buttom {
+	width: 60px;
+	height: 30px;
+	font-size: 14px;
+	border-radius: 10px;
+	background: rgb(236, 236, 236);
+	text-align: center;
+	line-height: 30px;
+	margin-right: 10px;
+	display: inline-block;
+}
+
+.choice {
+	color: white;
+	background: rgb(50, 50, 50);
+}
+
+/* 影片區 content */
+#content {
+	width: 85%;
+	height: 100%;
+	margin-top: 100px;
+	float: right;
+}
+
+.box4 {
+	width: 100%;
+	height: 100%;
+	margin: 0px 15px;
+	text-align: center;
+}
+
+#card {
+	padding: 2px;
+	margin-right: 12px;
+	display: inline-block;
+}
+
+.img01 {
+	width: 100%;
+	height: 180px;
+	border-radius: 10px;
+	background: url('../images/01.jpg') no-repeat center/cover;
+	margin-top: 30px;
+}
+
+.img11 {
+	width: 35px;
+	height: 35px;
+	float: left;
+	clear: both;
+	border-radius: 50%;
+	margin-top: 15px;
+	background: url('../images/11.jpg') no-repeat center/cover;
+}
+
+.img02 {
+	width: 100%;
+	height: 180px;
+	border-radius: 10px;
+	background: url('../images/02.jpg') no-repeat center/cover;
+	margin-top: 30px;
+}
+
+.img12 {
+	width: 35px;
+	height: 35px;
+	float: left;
+	clear: both;
+	border-radius: 50%;
+	margin-top: 15px;
+	background: url('../images/12.jpg') no-repeat center/cover;
+}
+
+.img03 {
+	width: 100%;
+	height: 180px;
+	border-radius: 10px;
+	background: url('../images/03.jpg') no-repeat center/cover;
+	margin-top: 30px;
+}
+
+.img13 {
+	width: 35px;
+	height: 35px;
+	float: left;
+	clear: both;
+	border-radius: 50%;
+	margin-top: 15px;
+	background: url('../images/13.jpg') no-repeat center/cover;
+}
+
+.img04 {
+	width: 100%;
+	height: 180px;
+	border-radius: 10px;
+	background: url('../images/04.jpg') no-repeat center/cover;
+	margin-top: 30px;
+}
+
+.img14 {
+	width: 35px;
+	height: 35px;
+	float: left;
+	clear: both;
+	border-radius: 50%;
+	margin-top: 15px;
+	background: url('../images/14.jpg') no-repeat center/cover;
+}
+
+.img05 {
+	width: 100%;
+	height: 180px;
+	border-radius: 10px;
+	background: url('../images/05.jpg') no-repeat center/cover;
+	margin-top: 30px;
+}
+
+.img15 {
+	width: 35px;
+	height: 35px;
+	float: left;
+	clear: both;
+	border-radius: 50%;
+	margin-top: 15px;
+	background: url('../images/15.jpg') no-repeat center/cover;
+}
+
+.img06 {
+	width: 100%;
+	height: 180px;
+	border-radius: 10px;
+	background: url('../images/06.jpg') no-repeat center/cover;
+	margin-top: 30px;
+}
+
+.img16 {
+	width: 35px;
+	height: 35px;
+	float: left;
+	clear: both;
+	border-radius: 50%;
+	margin-top: 15px;
+	background: url('../images/16.jpg') no-repeat center/cover;
+}
+
+.img07 {
+	width: 100%;
+	height: 180px;
+	border-radius: 10px;
+	background: url('../images/07.jpg') no-repeat center/cover;
+	margin-top: 30px;
+}
+
+.img17 {
+	width: 35px;
+	height: 35px;
+	float: left;
+	clear: both;
+	border-radius: 50%;
+	margin-top: 15px;
+	background: url('../images/17.jpg') no-repeat center/cover;
+}
+
+
+.p {
+	width: 250px;
+	padding: 15px 0 0 15px;
+	text-align: left;
+	float: right;
+}
+
+.title {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.text {
+	padding-top: 10px;
+	font-size: 12px;
+	line-height: 16px;
+}
